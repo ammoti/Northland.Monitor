@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "Architecture.Notification.Worker": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

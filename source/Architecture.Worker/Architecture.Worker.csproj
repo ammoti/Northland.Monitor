@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>dotnet-Architecture.Worker-09F307A0-3F75-4D1E-BEF4-44972D2491E3</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetCore.IoC" Version="12.34.0" />
+    <PackageReference Include="DotNetCore.Logging" Version="12.34.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Architecture.Application.csproj" />
+    <ProjectReference Include="..\Model\Architecture.Model.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,36 @@
+version: "3.7"
+
+services:
+    web:
+        build:
+            context: .
+            dockerfile: dockerfile-web
+            args:
+                ANGULAR_ENVIRONMENT: production
+        environment:
+            - ConnectionStrings:Context=Server=architecture_database;Database=Database;User Id=sa;Password=PaSSwOrd10!;
+        image: architecture_web
+        container_name: architecture_web
+        depends_on:
+            - database
+        networks:
+            - network
+        ports:
+            - 8090:80
+    database:
+        image: microsoft/mssql-server-linux
+        container_name: architecture_database
+        environment:
+            ACCEPT_EULA: Y
+            SA_PASSWORD: PaSSwOrd10!
+        networks:
+            - network
+        ports:
+            - 1433:1433
+        volumes:
+            - database:/var/opt/mssql
+networks:
+    network:
+
+volumes:
+    database:

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>dotnet-Architecture.Notification.Worker-FB2622E5-0750-4C2C-8B1F-907827ACEC1F</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetCore.IoC" Version="12.34.0" />
+    <PackageReference Include="DotNetCore.Logging" Version="12.34.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Architecture.Application.csproj" />
+    <ProjectReference Include="..\Database\Architecture.Database.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,45 @@
+<h2>Application Target List</h2>
+<!-- This is a button toggling the modal -->
+<button
+    class="uk-button uk-button-default uk-margin-small-right"
+    type="button"
+    uk-toggle="target: #modal-example"
+>
+    Add New Target
+</button>
+
+<!-- This is the modal -->
+<div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Headline</h2>
+        <form [formGroup]="form2">
+            <fieldset class="uk-fieldset" [disabled]="disabled">
+                <div class="uk-margin">
+                    <app-label for="title" text="Title"></app-label>
+                    <input class="uk-input" formControlName="title" />
+                </div>
+                <div class="uk-margin">
+                    <app-label for="url" text="Url"></app-label>
+                    <input class="uk-input" formControlName="url" />
+                </div>
+                <div class="uk-margin">
+                    <app-label for="interval" text="Interval"></app-label>
+                    <input class="uk-input" formControlName="interval" type="number" />
+                </div>
+
+                <div class="uk-margin"></div>
+            </fieldset>
+        </form>
+        <p class="uk-text-right">
+            <button
+                class="uk-button uk-button-default uk-modal-close"
+                type="button"
+            >
+                Cancel
+            </button>
+           
+            <app-button text="Save" (click)="addNew()"></app-button>
+        </p>
+    </div>
+</div>
+<app-list-grid></app-list-grid>
