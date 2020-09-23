@@ -56,7 +56,7 @@ namespace Architecture.Notification.Worker
                         _logger.LogError("Something wrong check out {message}", ex.Message);
                     }
                 }
-                await Task.Delay(30 * 1000, stoppingToken);
+                await Task.Delay(60 * 1000, stoppingToken);
             }
         }
 
